@@ -58,6 +58,25 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [
 # Clone this project
 $ git clone https://github.com/dphobday/renderhtml
 ```
+## :computer: Use ##
+```html
+<!--example.html-->
+
+<p><strong>{{ title }}</strong></p>
+```
+
+``` python
+# main.py
+
+from renderhtml import RenderHTML
+
+# Setup
+render = RenderHTML("/Path/to/my/templates")
+
+title = "Hello World!"
+html = render.render_template("example.html", title=title)
+```
+
 
 ## :memo: License ##
 
