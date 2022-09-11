@@ -33,7 +33,7 @@
 
 ## :dart: About ##
 
-A simple module for dynamically building html with Python code
+A simple module for dynamically building html with Python code. It was written as a helper for my work in data manipulation and will probably grow with those requirements. 
 
 ## :sparkles: Features ##
 
@@ -50,15 +50,22 @@ The following tools were used in this project:
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [Python](https://python.org/) V3.6+ and [Pip](https://pypi.org/project/Jinja2/) installed. If you do not already have [Jinja2](https://pypi.org/project/Jinja2/) installed in your env it will be installed with this package.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [Python](https://python.org/) V3.6+ and [Pip](https://pypi.org/project/Jinja2/) installed. It is highly recomended you use a virtual environment like venv! If you do not already have [Jinja2](https://pypi.org/project/Jinja2/) installed in your env it will be installed with this package.
 
 ## :checkered_flag: Starting ##
 
 ```bash
 # Clone this project
+
+$ cd /my/install/location
+
 $ git clone https://github.com/dphobday/renderhtml
 ```
 ## :computer: Use ##
+```bash
+$ pip install /my/install/location/renderhtml
+```
+
 ```html
 <!--example.html-->
 
@@ -73,8 +80,11 @@ from renderhtml import RenderHTML
 # Setup
 render = RenderHTML("/Path/to/my/templates")
 
-title = "Hello World!"
-html = render.render_template("example.html", title=title)
+def main():
+  title = "Hello World!"
+  html = render.render_template("example.html", title=title)
+
+main()
 ```
 
 
