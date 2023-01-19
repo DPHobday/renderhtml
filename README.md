@@ -33,7 +33,7 @@
 
 ## :dart: About ##
 
-A simple module for dynamically building html with Python code. It was written as a helper for my work in data manipulation and will probably grow with those requirements. 
+A simple Jinja2 wrapper for dynamically building html with Python code. It was written as a helper for my work in data manipulation and will probably grow with those requirements. 
 
 ## :sparkles: Features ##
 
@@ -55,16 +55,10 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [
 ## :checkered_flag: Starting ##
 
 ```bash
-# Clone this project
-
-$ cd /my/install/location
-
-$ git clone https://github.com/dphobday/renderhtml
+# To install:
+pip install git+https://github.com/dan-hobday/renderhtml
 ```
 ## :computer: Use ##
-```bash
-$ pip install /my/install/location/renderhtml
-```
 
 ```html
 <!--example.html-->
@@ -77,14 +71,11 @@ $ pip install /my/install/location/renderhtml
 
 from renderhtml import RenderHTML
 
-# Setup
+# Setup - If no path is provided will look for templates in the current directory (./) 
 render = RenderHTML("/Path/to/my/templates")
 
-def main():
-  title = "Hello World!"
-  html = render.render_template("example.html", title=title)
-
-main()
+title = "Hello World!"
+html = render.render_template("example.html", title=title)
 ```
 
 
@@ -93,7 +84,7 @@ main()
 This project is licensed under GPL-3.0. For more details, see the [LICENSE](LICENSE) file.
 
 
-Made by <a href="https://github.com/dphobday" target="_blank">github.com/dphobday</a>
+Written by <a href="https://github.com/dan-hobday" target="_blank">github.com/dan-hobday</a>
 
 &#xa0;
 
