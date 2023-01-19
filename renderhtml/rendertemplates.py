@@ -7,7 +7,7 @@ class RenderHTML:
         if template_dir:
             self.template_dir = template_dir
         else:
-            template_dir = "./"
+            self.template_dir = "./"
         self.env = Environment(loader=FileSystemLoader(self.template_dir))
 
     def render_template(self, filename: str, **kwargs) -> str:
